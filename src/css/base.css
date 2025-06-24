@@ -1,13 +1,24 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-
   color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: #eff3bf;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,9 +29,10 @@
 
 body {
   display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  width: 1512px;
+  height: 982px;
   margin: 0;
 }
 
@@ -29,4 +41,189 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+.card-portfolio {
+  position: relative;
+  top: 50%;
+  left: 35%;
+  width: 510px;
+  height: 755px;
+  border-radius: 64px;
+  background-color: #fff;
+  box-shadow: 0 4px 44px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-card {
+  position: relative;
+  border-radius: 64px 64px 0 0;
+  width: 510px;
+  height: 139px;
+  background-color: #973150;
+}
+
+.bottom-header-card {
+  width: 510px;
+  height: 190px;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+}
+
+.bg-3 {
+  z-index: 1;
+  top: 140px;
+}
+
+.bg-2 {
+  top: 115px;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.bg-5 {
+  top: 145px;
+  z-index: 2;
+}
+
+.bg-1 {
+  top: 115px;
+  z-index: 5;
+}
+
+.bg-grad {
+  top: 92px;
+  z-index: 6;
+}
+
+.bg-6 {
+  z-index: 7;
+}
+
+.bg-7 {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 8;
+  outline: none;
+}
+
+.main-title {
+  margin-top: 324px;
+
+  text-align: center;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+.mein-text {
+  font-size: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 34px;
+}
+
+ul {
+  display: flex;
+  gap: 33.2px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+ul a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+ul a:hover {
+  transform: scale(1.1);
+}
+
+.text-content {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38889;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #000;
+  margin: 40px 48px 75px 48px;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.btn-follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 999px;
+  padding: 16px;
+  width: 191px;
+  height: 57px;
+  background-color: #df3f8c;
+  border: transparent;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border: 1px solid #838383;
+  border-radius: 999px;
+  padding: 16px;
+  width: 191px;
+  height: 57px;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #838383;
 }
